@@ -94,6 +94,8 @@ int main(int argc, char **argv)
     int procNum;
     sscanf(argv[2], "%d", &procNum);
     
+    std::cout << "Start OMP, procNum: " << procNum << ". Size: " << size << "... " << std::endl;
+
     double* matrix_omp = new double[size * size];
     FillingTheMatrix(matrix_omp, size);
 

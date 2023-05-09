@@ -225,7 +225,7 @@ int main(int argc, char **argv)
         FillingTheMatrix(matrix_mpi, size);
 
         std::cout << "ProcNum(MPI): " << procNum << ", Num thread OMP:" << num_omp_th << std::endl;
-        std::cout << "Start hybrid... " << std::endl;
+        std::cout << "Start hybrid. Size: " << size << "... " << std::endl;
         start_mpi = MPI_Wtime();
     } else {
         int disp;
