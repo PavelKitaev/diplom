@@ -28,7 +28,7 @@ void ParallelAlgTBB(double* matrix, int size, double eps, int th_num) {
     oneapi::tbb::global_control global_limit(oneapi::tbb::global_control::max_allowed_parallelism, th_num);
     
     int q = 0;
-    double dmax, temp, dm, d;
+    double dmax;
     static tbb::spin_mutex mtx;
     std::mutex mutex;
 
