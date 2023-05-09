@@ -113,9 +113,9 @@ int main(int argc, char **argv)
     double* matrix_std = new double[size * size];
     FillingTheMatrix(matrix_std, size);
 
-    oneapi::tbb::tick_count start_std = omp_get_wtime();
+    double start_std = omp_get_wtime();
     ParallelAlgSTD(matrix_std, size, eps, procNum);
-    oneapi::tbb::tick_count end_std = omp_get_wtime();
+    double end_std = omp_get_wtime();
 
     double time_std = end_std - start_std;
     std::cout << ", STD Time: " << time_std << std::endl;
