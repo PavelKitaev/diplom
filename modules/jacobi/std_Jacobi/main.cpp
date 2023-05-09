@@ -44,7 +44,7 @@ void ParallelAlgSTD(double* matrix, int size, double eps, int th_num) {
     }
     
     std::thread* threads = new std::thread[th_num];
-    double dmax, temp, d, dm;
+    double dmax;
     
     const int delta = (size-2) / th_num;
     int residue = (size-2) % th_num;

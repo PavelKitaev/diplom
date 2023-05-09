@@ -35,7 +35,7 @@ void ParallelAlgTBB(double* matrix, int size, double eps, int th_num) {
     }
     
     int q = 0;
-    double dmax, temp, dm, d;
+    double dmax;
     static tbb::spin_mutex mtx;
     std::mutex mutex;
 
