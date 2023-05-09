@@ -14,7 +14,7 @@ if ( USE_TBB )
 
     target_link_libraries(${ProjectId} ${PACK_LIB})
     if( WIN32 )
-        target_link_libraries(${ProjectId} ${TBB_IMPORTED_TARGETS})
+        target_link_directories(${ProjectId} PUBLIC ${CMAKE_BINARY_DIR}/onetbb-install/lib)
     else( WIN32 )
         target_link_libraries(${ProjectId} ${TBB_LIBRARIES})
         target_link_libraries(${ProjectId} TBB::tbb)
