@@ -66,9 +66,9 @@ int main(int argc, char **argv)
     matrix_seq = new double[size * size];
     FillingTheMatrix(matrix_seq, size);
     
-    oneapi::tbb::tick_count start_seq = omp_get_wtime();
+    double start_seq = omp_get_wtime();
     SequentialAlg(matrix_seq, size, eps);
-    oneapi::tbb::tick_count end_seq = omp_get_wtime();
+    double end_seq = omp_get_wtime();
     
     double time_seq = end_seq - start_seq;
     std::cout << ", SEQ Time: " << time_seq << std::endl;
