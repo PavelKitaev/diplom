@@ -118,7 +118,7 @@ int main(int argc, char **argv)
     MPI_Win win_matrix;      //Создаем окно доступа к матрице
 
     if (procRank == 0) {
-        MPI_Win_allocate_shared(size*size * sizeof(double), 1, MPI_INFO_NULL, MPI_COMM_WORLD, &matrix_mpi, &win
+        MPI_Win_allocate_shared(size*size * sizeof(double), 1, MPI_INFO_NULL, MPI_COMM_WORLD, &matrix_mpi, &win);
         FillingTheMatrix(matrix_mpi, size);
         std::cout << "ProcNum: " << procNum << std::endl;
         std::cout << "Start mpi... " << std::endl;
